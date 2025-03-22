@@ -1,0 +1,33 @@
+<robot name="shelf_model">
+  <link name="shelf">
+    <contact>
+      <lateral_friction value="0.5"/>
+    </contact>
+    <inertial>
+      <mass value="3.0" />
+      <!-- center of mass (com) is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" /> 
+      <inertia  ixx="1" ixy="0.0"  ixz="0.0"  iyy="1"  iyz="0.0"  izz="1" />
+    </inertial>
+    <visual>
+      <!-- visual origin is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.285 1.2"/>
+      </geometry>
+    </visual>
+    <collision>
+      <!-- collision origin is defined w.r.t. link local coordinate system -->
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.285 1.2"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- <gazebo reference="shelf">
+    <turnGravityOff>false</turnGravityOff>
+    <genTexCoord>true</genTexCoord>
+    <kp>100000000.0</kp>
+    <kd>10000.0</kd>
+  </gazebo> -->
+</robot>
